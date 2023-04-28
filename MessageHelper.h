@@ -27,7 +27,6 @@ public:
         DoubleSigned = 0x05,
         Registration = 0x06,
         Error = 0xfe,
-        // 0000 0000
     };
     Q_ENUM(TYPE)
 
@@ -74,7 +73,6 @@ public:
         json["reason"] = reason;
         return make(TYPE::Error, json);
     }
-
     static QByteArray makeDoubleSignError(const QString &doubleSign = ""){
         QJsonObject json;
         json["doubleSign"] = doubleSign;
